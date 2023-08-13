@@ -28,6 +28,7 @@ jobs:
           touch b
           git config --global user.name kagomomi
           git config --global user.email kamo52programing@gmail.com
+          git init
           git branch
           git add .
           git commit -m "generated"
