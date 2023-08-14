@@ -26,9 +26,10 @@ jobs:
       # プライベートリポジトリの中身を表示してみる
       - run: |
           touch b
-          
-          git config user.name kagomomi
-          git config user.email kamo52programing@gmail.com
+          ls -a
+          git status -b
+          git config user.name "kagomomi"
+          git config user.email "kamo52programing@gmail.com"
           git add .
           git commit -m "generated"
           git push
