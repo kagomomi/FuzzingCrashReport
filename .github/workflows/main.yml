@@ -25,6 +25,7 @@ jobs:
 
       # プライベートリポジトリの中身を表示してみる
       - run: |
+          cd ./main
           touch b
           ls -a
           git status -b
