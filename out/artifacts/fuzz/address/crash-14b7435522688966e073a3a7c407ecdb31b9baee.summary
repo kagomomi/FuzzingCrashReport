@@ -1,4 +1,4 @@
-/github/workspace/build-out/fuzz -timeout=25 -rss_limit_mb=2560 -len_control=0 -seed=1337 -artifact_prefix=/tmp/tmpe74_dfzt/ -max_total_time=600 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz >fuzz-0.log 2>&1
+/github/workspace/build-out/fuzz -timeout=25 -rss_limit_mb=2560 -len_control=0 -seed=1337 -artifact_prefix=/tmp/tmplgmalnzl/ -max_total_time=600 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz >fuzz-0.log 2>&1
 ================== Job 0 exited with exit code 77 ============
 INFO: Running with entropic power schedule (0xFF, 100).
 INFO: Seed: 1337
@@ -6,24 +6,24 @@ INFO: Loaded 1 modules   (139 inline 8-bit counters): 139 [0x61afe0, 0x61b06b),
 INFO: Loaded 1 PC tables (139 PCs): 139 [0x5cea10,0x5cf2c0), 
 INFO:        1 files found in /github/workspace/cifuzz-corpus/fuzz
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
-INFO: seed corpus: files: 1 min: 1b max: 1b total: 1b rss: 35Mb
-#2	INITED cov: 9 ft: 10 corp: 1/1b exec/s: 0 rss: 35Mb
-#4	NEW    cov: 10 ft: 12 corp: 2/3b lim: 4096 exec/s: 0 rss: 35Mb L: 2/2 MS: 2 ChangeBit-InsertByte-
-#6	NEW    cov: 10 ft: 14 corp: 3/124b lim: 4096 exec/s: 0 rss: 35Mb L: 121/121 MS: 2 CopyPart-InsertRepeatedBytes-
-#10	NEW    cov: 10 ft: 16 corp: 4/129b lim: 4096 exec/s: 0 rss: 36Mb L: 5/121 MS: 4 CopyPart-ChangeBit-EraseBytes-CMP- DE: "\377\377\377\377"-
-#16	NEW    cov: 10 ft: 18 corp: 5/132b lim: 4096 exec/s: 0 rss: 36Mb L: 3/121 MS: 1 InsertByte-
-#22	NEW    cov: 10 ft: 20 corp: 6/374b lim: 4096 exec/s: 0 rss: 36Mb L: 242/242 MS: 1 CrossOver-
-#30	NEW    cov: 10 ft: 22 corp: 7/383b lim: 4096 exec/s: 0 rss: 36Mb L: 9/242 MS: 3 ChangeBit-CrossOver-CMP- DE: "\000\000\000\000\000\000\000\000"-
-#33	REDUCE cov: 10 ft: 22 corp: 7/352b lim: 4096 exec/s: 0 rss: 36Mb L: 90/242 MS: 3 InsertByte-PersAutoDict-EraseBytes- DE: "\000\000\000\000\000\000\000\000"-
-#44	NEW    cov: 10 ft: 24 corp: 8/369b lim: 4096 exec/s: 0 rss: 36Mb L: 17/242 MS: 1 PersAutoDict- DE: "\000\000\000\000\000\000\000\000"-
+INFO: seed corpus: files: 1 min: 1b max: 1b total: 1b rss: 33Mb
+#2	INITED cov: 9 ft: 10 corp: 1/1b exec/s: 0 rss: 33Mb
+#4	NEW    cov: 10 ft: 12 corp: 2/3b lim: 4096 exec/s: 0 rss: 33Mb L: 2/2 MS: 2 ChangeBit-InsertByte-
+#6	NEW    cov: 10 ft: 14 corp: 3/124b lim: 4096 exec/s: 0 rss: 34Mb L: 121/121 MS: 2 CopyPart-InsertRepeatedBytes-
+#10	NEW    cov: 10 ft: 16 corp: 4/129b lim: 4096 exec/s: 0 rss: 34Mb L: 5/121 MS: 4 CopyPart-ChangeBit-EraseBytes-CMP- DE: "\377\377\377\377"-
+#16	NEW    cov: 10 ft: 18 corp: 5/132b lim: 4096 exec/s: 0 rss: 34Mb L: 3/121 MS: 1 InsertByte-
+#22	NEW    cov: 10 ft: 20 corp: 6/374b lim: 4096 exec/s: 0 rss: 34Mb L: 242/242 MS: 1 CrossOver-
+#30	NEW    cov: 10 ft: 22 corp: 7/383b lim: 4096 exec/s: 0 rss: 34Mb L: 9/242 MS: 3 ChangeBit-CrossOver-CMP- DE: "\000\000\000\000\000\000\000\000"-
+#33	REDUCE cov: 10 ft: 22 corp: 7/352b lim: 4096 exec/s: 0 rss: 34Mb L: 90/242 MS: 3 InsertByte-PersAutoDict-EraseBytes- DE: "\000\000\000\000\000\000\000\000"-
+#44	NEW    cov: 10 ft: 24 corp: 8/369b lim: 4096 exec/s: 0 rss: 34Mb L: 17/242 MS: 1 PersAutoDict- DE: "\000\000\000\000\000\000\000\000"-
 	NEW_FUNC[1/1]: 0x5711d0 in std::__1::deque<char, std::__1::allocator<char> >::__add_back_capacity() /usr/local/bin/../include/c++/v1/deque:2551
-#59	NEW    cov: 22 ft: 37 corp: 9/378b lim: 4096 exec/s: 0 rss: 36Mb L: 9/242 MS: 5 ChangeByte-CrossOver-ChangeBinInt-PersAutoDict-ChangeByte- DE: "\000\000\000\000\000\000\000\000"-
-#65	NEW    cov: 24 ft: 40 corp: 10/388b lim: 4096 exec/s: 0 rss: 36Mb L: 10/242 MS: 1 CopyPart-
-#66	NEW    cov: 24 ft: 41 corp: 11/392b lim: 4096 exec/s: 0 rss: 36Mb L: 4/242 MS: 1 InsertByte-
-#78	NEW    cov: 25 ft: 42 corp: 12/432b lim: 4096 exec/s: 0 rss: 36Mb L: 40/242 MS: 2 InsertRepeatedBytes-InsertByte-
+#59	NEW    cov: 22 ft: 37 corp: 9/378b lim: 4096 exec/s: 0 rss: 34Mb L: 9/242 MS: 5 ChangeByte-CrossOver-ChangeBinInt-PersAutoDict-ChangeByte- DE: "\000\000\000\000\000\000\000\000"-
+#65	NEW    cov: 24 ft: 40 corp: 10/388b lim: 4096 exec/s: 0 rss: 34Mb L: 10/242 MS: 1 CopyPart-
+#66	NEW    cov: 24 ft: 41 corp: 11/392b lim: 4096 exec/s: 0 rss: 34Mb L: 4/242 MS: 1 InsertByte-
+#78	NEW    cov: 25 ft: 42 corp: 12/432b lim: 4096 exec/s: 0 rss: 34Mb L: 40/242 MS: 2 InsertRepeatedBytes-InsertByte-
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==46==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x000000570693 bp 0x7ffeab177420 sp 0x7ffeab177340 T0)
+==46==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x000000570693 bp 0x7ffdbf2d8f00 sp 0x7ffdbf2d8e20 T0)
 ==46==The signal is caused by a READ memory access.
 ==46==Hint: this fault was caused by a dereference of a high value address (see register values below).  Disassemble the provided pc to learn which register was used.
 SCARINESS: 20 (wild-addr-read)
@@ -37,7 +37,7 @@ SCARINESS: 20 (wild-addr-read)
     #7 0x4439a5 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, std::__Fuzzer::allocator<fuzzer::SizedFile> >&) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:895:5
     #8 0x432d0f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:912:6
     #9 0x45c362 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x7f8dacfa7082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 1878e6b475720c7c51969e69ab2d276fae6d1dee)
+    #10 0x7f1c6b49f082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 1878e6b475720c7c51969e69ab2d276fae6d1dee)
     #11 0x42374d in _start (build-out/fuzz+0x42374d)
 
 DEDUP_TOKEN: std::__1::deque<char, std::__1::allocator<char> >::back()--std::__1::stack<char, std::__1::deque<char, std::__1::allocator<char> > >::top()--check_parens(unsigned char const*, unsigned long)
@@ -47,14 +47,14 @@ SUMMARY: AddressSanitizer: SEGV /usr/local/bin/../include/c++/v1/deque:1894:14 i
 MS: 3 ChangeBit-ShuffleBytes-InsertByte-; base unit: d4d963cb461e04bfa93d1f19d03262c1424effa9
 0x0,0x0,0x0,0x0,0x5d,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x10,0x2a,
 \000\000\000\000]\000\000\000\000\000\000\000\000\000\000\000\020*
-artifact_prefix='/tmp/tmpe74_dfzt/'; Test unit written to /tmp/tmpe74_dfzt/crash-14b7435522688966e073a3a7c407ecdb31b9baee
+artifact_prefix='/tmp/tmplgmalnzl/'; Test unit written to /tmp/tmplgmalnzl/crash-14b7435522688966e073a3a7c407ecdb31b9baee
 Base64: AAAAAF0AAAAAAAAAAAAAABAq
 stat::number_of_executed_units: 81
 stat::average_exec_per_sec:     0
 stat::new_units_added:          12
 stat::slowest_unit_time_sec:    0
-stat::peak_rss_mb:              37
-/github/workspace/build-out/fuzz -timeout=25 -rss_limit_mb=2560 -len_control=0 -seed=1337 -artifact_prefix=/tmp/tmpe74_dfzt/ -max_total_time=600 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz >fuzz-1.log 2>&1
+stat::peak_rss_mb:              35
+/github/workspace/build-out/fuzz -timeout=25 -rss_limit_mb=2560 -len_control=0 -seed=1337 -artifact_prefix=/tmp/tmplgmalnzl/ -max_total_time=600 -print_final_stats=1 /github/workspace/cifuzz-corpus/fuzz >fuzz-1.log 2>&1
 ================== Job 1 exited with exit code 77 ============
 INFO: Running with entropic power schedule (0xFF, 100).
 INFO: Seed: 1337
@@ -70,7 +70,7 @@ INFO: seed corpus: files: 12 min: 1b max: 242b total: 432b rss: 35Mb
 #108	REDUCE cov: 25 ft: 45 corp: 11/308b lim: 4096 exec/s: 0 rss: 36Mb L: 35/217 MS: 1 EraseBytes-
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==50==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x000000570693 bp 0x7fff803074e0 sp 0x7fff80307400 T0)
+==50==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x000000570693 bp 0x7ffcccbc8050 sp 0x7ffcccbc7f80 T0)
 ==50==The signal is caused by a READ memory access.
 ==50==Hint: this fault was caused by a dereference of a high value address (see register values below).  Disassemble the provided pc to learn which register was used.
 SCARINESS: 20 (wild-addr-read)
@@ -84,7 +84,7 @@ SCARINESS: 20 (wild-addr-read)
     #7 0x4439a5 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, std::__Fuzzer::allocator<fuzzer::SizedFile> >&) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:895:5
     #8 0x432d0f in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:912:6
     #9 0x45c362 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
-    #10 0x7f9080727082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 1878e6b475720c7c51969e69ab2d276fae6d1dee)
+    #10 0x7f2386908082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 1878e6b475720c7c51969e69ab2d276fae6d1dee)
     #11 0x42374d in _start (build-out/fuzz+0x42374d)
 
 DEDUP_TOKEN: std::__1::deque<char, std::__1::allocator<char> >::back()--std::__1::stack<char, std::__1::deque<char, std::__1::allocator<char> > >::top()--check_parens(unsigned char const*, unsigned long)
@@ -94,7 +94,7 @@ SUMMARY: AddressSanitizer: SEGV /usr/local/bin/../include/c++/v1/deque:1894:14 i
 MS: 2 ChangeBit-ChangeByte-; base unit: d9ccad3fd13e2c2b3d2c34c9f067f44f04431ace
 0x7f,0x7d,0xff,0xff,0x6e,
 \177}\377\377n
-artifact_prefix='/tmp/tmpe74_dfzt/'; Test unit written to /tmp/tmpe74_dfzt/crash-a1581e55fb439554f7eda91b11747427cdeda840
+artifact_prefix='/tmp/tmplgmalnzl/'; Test unit written to /tmp/tmplgmalnzl/crash-a1581e55fb439554f7eda91b11747427cdeda840
 Base64: f33//24=
 stat::number_of_executed_units: 125
 stat::average_exec_per_sec:     0
