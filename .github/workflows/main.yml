@@ -26,6 +26,7 @@ jobs:
 
       # プライベートリポジトリの中身を表示してみる
       - run: |
+          ls $GITHUB_WORKSPACE
           cd ./main
           touch b
           ls -a
