@@ -1,0 +1,27 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1337
+INFO: Loaded 1 modules   (139 inline 8-bit counters): 139 [0x61afe0, 0x61b06b), 
+INFO: Loaded 1 PC tables (139 PCs): 139 [0x5cea10,0x5cf2c0), 
+/github/workspace/build-out/fuzz: Running 1 inputs 100 time(s) each.
+Running: /tmp/tmp9rp5i5j0/crash-14b7435522688966e073a3a7c407ecdb31b9baee
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==57==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x000000570693 bp 0x7ffe110a3140 sp 0x7ffe110a3060 T0)
+==57==The signal is caused by a READ memory access.
+==57==Hint: this fault was caused by a dereference of a high value address (see register values below).  Disassemble the provided pc to learn which register was used.
+SCARINESS: 20 (wild-addr-read)
+    #0 0x570693 in std::__1::deque<char, std::__1::allocator<char> >::back() /usr/local/bin/../include/c++/v1/deque:1894:14
+    #1 0x570693 in std::__1::stack<char, std::__1::deque<char, std::__1::allocator<char> > >::top() /usr/local/bin/../include/c++/v1/stack:219:43
+    #2 0x570693 in check_parens(unsigned char const*, unsigned long) /src/ccwork/src/test.cpp:18:25
+    #3 0x57040f in LLVMFuzzerTestOneInput /src/ccwork/src/test_fuzzer.cc:8:2
+    #4 0x441e23 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerLoop.cpp:611:15
+    #5 0x42d582 in fuzzer::RunOneTest(fuzzer::Fuzzer*, char const*, unsigned long) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:324:6
+    #6 0x432e2c in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerDriver.cpp:860:9
+    #7 0x45c362 in main /src/llvm-project/compiler-rt/lib/fuzzer/FuzzerMain.cpp:20:10
+    #8 0x7f8828015082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: 1878e6b475720c7c51969e69ab2d276fae6d1dee)
+    #9 0x42374d in _start (build-out/fuzz+0x42374d)
+
+DEDUP_TOKEN: std::__1::deque<char, std::__1::allocator<char> >::back()--std::__1::stack<char, std::__1::deque<char, std::__1::allocator<char> > >::top()--check_parens(unsigned char const*, unsigned long)
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /usr/local/bin/../include/c++/v1/deque:1894:14 in std::__1::deque<char, std::__1::allocator<char> >::back()
+==57==ABORTING
